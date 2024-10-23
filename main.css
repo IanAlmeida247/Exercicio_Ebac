@@ -43,3 +43,66 @@ header li {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.articles article img {
+    /*height: 180px; */
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section {    
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: indigo;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-top: 8px;
+}
+
+.articles article:hover {
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+#Animes {
+    background-color: #0d151f;
+}
+
+#Gamer {
+    background-color: #343434
+}
+
+#Gamer .articles article a {
+    background-color: #515151;
+
+}
