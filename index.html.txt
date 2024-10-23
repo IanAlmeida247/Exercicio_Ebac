@@ -1,0 +1,144 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu portal de notícias</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1>Meu Mundo Gamer e Animes</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#Anime" title="Ir para a seção de Animes">Animes</a>
+                </li>
+                <li>
+                    <a href="#Gamer" title="Ir para a seção de gamer">Gamer</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section id= "Animes">  
+        <div class="container">
+        <h2>Animes</h2>
+        <div class="articles">
+            <article>                
+                <img src="./midia/solo-leveling-sung-jinwoo-statue-of-god-2k-wallpaper-uhdpaper.com-142@2@b.jpg" alt="Bola de futebol no gramado">
+                <header>
+                    <time class="creation-date">16/10/2024 21:00</time>
+                </header>
+                <h3>A segunda temporada de Solo Leveling tem estreia prevista para janeiro de 2025</h3>
+                <p>
+                    A informação foi divulgada no Aniplex Online Fest 2024, que apresentou um trailer e uma imagem promocional da nova temporada. 
+                    A série é baseada no manhwa de Chu-Gong e acompanha a jornada de Jin-woo, um caçador de nível baixo que se depara com uma missão misteriosa. A nova temporada promete expandir o universo de Solo Leveling, com mais foco nos personagens secundários e na exploração de suas histórias e motivações.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/tanjiro-demon-slayer-kimetsu-no-yaiba-infinity-castle-2k-wallpaper-uhdpaper.com-248@2@a.jpg" alt="Jogador de futebol americano correndo com a bola na mão">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>Arco castelo infinito sera  feito com tres filmes e se encerra em 2028 em quanto isso os hashiras e as luas superiores jogam volei ate o lançamento do primeiro Filme</h3>
+                <p>
+                    A Sony Pictures e a Crunchyroll confirmaram a trilogia de filmes que adaptará o arco final do mangá Demon Slayer: Kimetsu no Yaiba. 
+                    A trilogia será distribuída em cinemas de todo o mundo, exceto em alguns países da Ásia e do Japão. 
+                    A Sony Pictures já garantiu a estreia nos cinemas brasileiros, mas a data ainda não foi divulgada. 
+                    O primeiro longa-metragem poderá chegar em meados de 2025.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+            <img src="./midia/black-clover-anime-characters-uhdpaper.com-4K-8.2152.jpg" alt="jogador de futebol correndo com a bola">
+                <header>
+                    <time> 16/10/2024 21:00<time>
+                </header> 
+                <h3>A quinta temporada de Black Clover ainda não tem uma data de estreia oficial, mas rumores indicam que possa estrear em 2024. A expectativa é grande entre os fãs, especialmente após o sucesso do filme Black Clover: Sword of the Wizard King.</h3> 
+                <p>
+                    A Shonen Jump anunciou uma pausa de três meses no mangá de Black Clover para que o criador Yuki Tabata prepare o arco final da história. 
+                    Em relação à plataforma de streaming, é provável que a 5ª temporada de Black Clover esteja disponível no Crunchyroll e na Netflix.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/sasuke-naruto-uhdpaper.com-4K-48.jpg" alt="Jogador de futebol americano correndo com a bola na mão">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>Naruto Shippuden ganha novos episodios dublados na NetFlix</h3>
+                <p>
+                    Os fãs da franquia Naruto podem comemorar! A Netflix registrou em seus servidores cerca de 106 episódios dublados de Naruto Shippuden, o que significa que estes capítulos chegarão ao catálogo em breve com localização em português.Os episódios cadastrados vão do 113 ao 242, que englobam a sexta temporada do anime. É a primeira vez em anos que Shippuden ganha novos episódios com dublagem em português.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/kaiju.jpg " alt="Jogador de futebol americano correndo com a bola na mão">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>Kaiju No8 tem sequencia confirmada pela Crunchyroll </h3>
+                <p>
+                    A história de Kaiju No. 8 gira em torno de Kafka Hibino, que deseja entrar para a Força de Defesa contra Kaijus após uma tragédia pessoal. Ao lado de Mina Ashiro, sua amiga de infância, Kafka tenta entrar para o grupo, mas, pela falta de força física, filha. Contudo, ele recebe a habilidade de virar um kaiju e lutar contra as criaturas gigantes por conta própria.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/blue.jpg" alt="Jogador de futebol americano correndo com a bola na mão">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>Blue Lock | Zico agradece por homenagem no anime</h3>
+                <p>
+                    Arthur Antunes Coimbra, mais conhecido como Zico, é ídolo do Flamengo e da Seleção Brasileira, mas também marcou história no futebol japonês. Agora, sua figura foi homenageada no anime Blue Lock. O ex-jogador, então, não deixou de se manifestar e agradecer pela referência.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+    </div> 
+    </section>
+    <section id="Gamer">
+        <div class= "container">
+            <h2>Gamer</h2>
+            <div class="articles">
+                <article>
+                    <img src="./midia/jogo1.jpg" alt="Muitos dólares">
+                    <header>
+                        <time>16/10/2024 21:00</time>
+                    </header>
+                    <h3>DRAGON BALL: SPARKING! ZERO registra mais de 3 milhões de unidades vendidas</h3>
+                    <p>
+                        A Bandai Namco anunciou que DRAGON BALL: Sparking! ZERO, primeira sequência após 15 anos de hiato da lendária franquia DRAGON BALL Z: BUDOKAI TENKAICHI, ultrapassou 3 milhões de unidades vendidas globalmente em apenas 24 horas após seu lançamento.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/jogos2.jpg" alt="Várias notas de euro">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>Quando o GTA 6 lança?</h3>
+                <p>
+                    Apesar de rumores sobre um possível adiamento de GTA 6, a Take-Two Interactive confirmou em um documento que a continuação de uma das séries de maior sucesso da indústria chegará definitivamente no fim de 2025.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>
+            <article>
+                <img src="./midia/jogos3.jpg" alt="Extração de petróleo">
+                <header>
+                    <time>16/10/2024 21:00</time>
+                </header>
+                <h3>A nevoa esta incomodando alguns jogadores na nova franquia de silent hill 2 e issso mesmo jogadores reclamam da nevoa do jogo</h3>
+                <p>
+                    Querem jogar essa franquia maravilhosa sem novoa entao nao joguem o jogo da barbie que a tela e limpa, diz o criador desse portal de noticias.
+                </p>
+                <a href="#" title="Leia a notícia completa">Ler mais</a>
+            </article>            
+            </div>
+    </div>
+    </section>
+
+</body>
+</html>
