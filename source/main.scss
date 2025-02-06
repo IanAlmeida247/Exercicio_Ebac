@@ -1,0 +1,10 @@
+@use 'config/reset';
+@use 'config/variaveis';
+@use 'config/buttons';
+@use 'config/layout';
+@use 'config/header';
+@use 'config/products';
+
+body {
+    background-color: rgba(133, 133, 143, 0.589);
+}
