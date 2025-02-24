@@ -1,0 +1,23 @@
+@primary-color: #3498db;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: @primary-color;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+button {
+    background-color: darken(@primary-color, 10%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darken(@primary-color, 20%);
+}

@@ -1,0 +1,9 @@
+function saudacao(nome) {
+    alert("Olá, " + nome + "!");
+}
+
+    saudacao("João");
+
+    document.querySelector("button").addEventListener("click", function() {
+    alert("Você clicou no botão!");
+});
