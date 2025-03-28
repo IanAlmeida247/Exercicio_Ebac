@@ -1,209 +1,147 @@
-<script setup>
-import { ref, computed } from 'vue';
-
-const num1 = ref('');
-const num2 = ref('');
-const operacao = ref(null);
-const expressao = ref('');
-
-const resultado = computed(() => {
-  let n1 = parseFloat(num1.value);
-  let n2 = parseFloat(num2.value);
-  let res;
-
-  // Verificando se num1 ou num2 são números válidos
-  if (isNaN(n1) || isNaN(n2)) {
-    return 'Erro';
-  }
-
-  switch (operacao.value) {
-    case '+':
-      res = n1 + n2;
-      break;
-    case '-':
-      res = n1 - n2;
-      break;
-    case '*':
-      res = n1 * n2;
-      break;
-    case '/':
-      if (n2 === 0) {
-        res = 'Erro';
-      } else {
-        res = n1 / n2;
-      }
-      break;
-    default:
-      res = n1;
-  }
-  return res;
-});
-
-function adicionarNumero(num) {
-  if (operacao.value === null) {
-    num1.value += num.toString();
-  } else {
-    num2.value += num.toString();
-  }
-  expressao.value = `${num1.value} ${operacao.value ? `${operacao.value} ` : ''}${num2.value}`;
-}
-
-function selecionarOperacao(oper) {
-  if (num1.value !== '' && num2.value !== '') {
-    calcularResultado();
-  }
-  operacao.value = oper;
-  expressao.value = `${num1.value} ${oper}`;
-}
-
-function calcularResultado() {
-  if (num1.value !== '' && num2.value !== '') {
-    num1.value = resultado.value.toString();
-    num2.value = '';
-    operacao.value = null;
-    expressao.value = num1.value;
-  }
-}
-
-function limparDisplay() {
-  num1.value = '';
-  num2.value = '';
-  operacao.value = null;
-  expressao.value = '';
-}
-</script>
-
 <template>
-  <div class="app">
-    <div class="calculadora">
-      <h1>Vamos Calcular</h1>
+  <div id="app">
+    <h1>Vamos Calcular!</h1>
 
-      <div class="display">
-        <p class="resultado">{{ expressao }}</p>
+    <div class="calculator">
+      <div class="input-container">
+        <input
+          type="number"
+          v-model="numero1"
+          placeholder="Digite o primeiro número"
+          class="input"
+        />
+        <select v-model="operacao" class="select">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input
+          type="number"
+          v-model="numero2"
+          placeholder="Digite o segundo número"
+          class="input"
+        />
       </div>
 
-      <div class="teclado">
-        <button @click="adicionarNumero(7)">7</button>
-        <button @click="adicionarNumero(8)">8</button>
-        <button @click="adicionarNumero(9)">9</button>
-        <button @click="selecionarOperacao('+')">+</button>
-
-        <button @click="adicionarNumero(4)">4</button>
-        <button @click="adicionarNumero(5)">5</button>
-        <button @click="adicionarNumero(6)">6</button>
-        <button @click="selecionarOperacao('-')">-</button>
-
-        <button @click="adicionarNumero(1)">1</button>
-        <button @click="adicionarNumero(2)">2</button>
-        <button @click="adicionarNumero(3)">3</button>
-        <button @click="selecionarOperacao('*')">*</button>
-
-        <button @click="adicionarNumero(0)">0</button>
-        <button @click="limparDisplay">C</button>
-        <button @click="calcularResultado">=</button>
-        <button @click="selecionarOperacao('/')">/</button>
-      </div>
+      <h2 class="result">Resultado: {{ resultado }}</h2>
     </div>
   </div>
 </template>
 
-<style scoped>
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa, #0072ff);
-  font-family: 'Roboto', sans-serif;
-}
+<script>
+export default {
+  data() {
+    return {
+      numero1: 0,
+      numero2: 0,
+      operacao: '+',
+    };
+  },
+  computed: {
+    resultado() {
+      let res;
+      switch (this.operacao) {
+        case '+':
+          res = this.numero1 + this.numero2;
+          break;
+        case '-':
+          res = this.numero1 - this.numero2;
+          break;
+        case '*':
+          res = this.numero1 * this.numero2;
+          break;
+        case '/':
+          // Prevenção de divisão por zero
+          res = this.numero2 !== 0 ? this.numero1 / this.numero2 : 'Erro';
+          break;
+        default:
+          res = 0;
+          break;
+      }
+      return res;
+    },
+  },
+};
+</script>
 
-.calculadora {
-  width: 100%;
-  max-width: 380px;
-  background-color: #34495e;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+<style scoped>
+#app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 2.8em;
-  color: #fff;
-  font-family: 'Pacifico', cursive;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #4a90e2;
+  margin-bottom: 30px;
+}
+
+.calculator {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
   text-align: center;
 }
 
-.display {
-  width: 100%;
-  padding: 20px;
-  text-align: right;
-  background-color: #ecf0f1;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-
-.display p {
-  font-size: 3em;
-  color: #2c3e50;
-  margin: 0;
-}
-
-.teclado {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.input-container {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-  width: 100%;
 }
 
-button {
-  padding: 25px;
-  font-size: 1.6em;
-  border-radius: 12px;
-  border: none;
-  background-color: #ecf0f1;
-  color: #2c3e50;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+.input {
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  transition: border-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #bdc3c7;
-  transform: scale(1.05);
+.input:focus {
+  border-color: #4a90e2;
 }
 
-button:active {
-  background-color: #95a5a6;
+.select {
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #4a90e2;
+  transition: border-color 0.3s ease;
 }
 
-button:focus {
-  outline: none;
+.select:focus {
+  border-color: #4a90e2;
 }
 
-button:nth-child(4n) {
-  background-color: #f39c12;
-  color: white;
+.result {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
 }
 
-button:nth-child(4n):hover {
-  background-color: #e67e22;
-}
-
-button:nth-child(16) {
-  background-color: #27ae60;
-  color: white;
-}
-
-button:nth-child(16):hover {
-  background-color: #2ecc71;
+h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
 }
 </style>
-
-
-
 
 
 
